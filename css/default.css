@@ -1,0 +1,417 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/NotoSansJP-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/NotoSansJP-Medium.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/NotoSansJP-Bold.woff2") format("woff2");
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+embed,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-size: 100%;
+  font-weight: normal;
+  border: none;
+  background: transparent;
+  vertical-align: baseline;
+}
+
+html {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+body {
+  font-family: "Noto Sans JP", "游ゴシック", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  color: #000;
+  line-height: 2;
+  overflow-x: hidden;
+}
+@media (min-width: 751px) and (max-width: 1300px) {
+  body {
+    font-size: 1.2307692308vw;
+  }
+}
+@media (max-width: 750px) {
+  body {
+    font-size: 3.2vw;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Noto Sans JP", "游ゴシック", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  color: #000;
+  line-height: 2;
+}
+@media (min-width: 751px) and (max-width: 1300px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.2307692308vw;
+  }
+}
+@media (max-width: 750px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 3.2vw;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+br {
+  letter-spacing: 0;
+}
+
+pre {
+  font-family: "Noto Sans JP", "游ゴシック", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", sans-serif;
+  line-height: 2;
+  letter-spacing: 0;
+  white-space: pre;
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: #000;
+  background-color: #000;
+  height: 1px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+th,
+td {
+  vertical-align: top;
+}
+
+ol,
+ul {
+  list-style: none;
+  zoom: normal;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+input[type=text],
+input[type=password],
+input[type=tel],
+input[type=email],
+textarea,
+select {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #707070;
+  font-size: 93%;
+  color: #000;
+  background-color: #fff;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=tel]:focus,
+input[type=email]:focus,
+textarea:focus {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #6ddeff;
+  font-size: 93%;
+  color: #000;
+  background-color: #fff;
+}
+
+button,
+input[type=button],
+input[type=submit],
+input[type=reset] {
+  padding: 3px 0.7em 1px;
+  margin: 0;
+}
+
+form label,
+button,
+input[type=button],
+input[type=submit],
+input[type=reset] {
+  font-size: 0.8em;
+  padding: 3px 10px;
+  cursor: hand;
+  cursor: pointer;
+}
+
+input[disabled][readonly] {
+  background-color: #ccc;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+.hideText {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+input[type=text],
+input[type=submit],
+input[type=button],
+input[type=email],
+input[type=tel] {
+  font-size: 16px;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input[type=submit],
+input[type=button],
+input[type=email],
+input[type=tel],
+input[type=button] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;
+  box-sizing: border-box;
+}
+input[type=submit]::-webkit-search-decoration,
+input[type=button]::-webkit-search-decoration,
+input[type=email]::-webkit-search-decoration,
+input[type=tel]::-webkit-search-decoration,
+input[type=button]::-webkit-search-decoration {
+  display: none;
+}
+input[type=submit]::focus,
+input[type=button]::focus,
+input[type=email]::focus,
+input[type=tel]::focus,
+input[type=button]::focus {
+  outline-offset: -2px;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  border-radius: 0;
+  border: none;
+  box-sizing: border-box;
+  vertical-align: -2px;
+}
+
+.pc {
+  display: inline-block;
+}
+
+@media (max-width: 750px) {
+  .pc {
+    display: none;
+  }
+}
+.sp {
+  display: none;
+}
+
+@media (max-width: 750px) {
+  .sp {
+    display: inline-block;
+  }
+}
+.tC {
+  text-align: center;
+}
+
+.tR {
+  text-align: right;
+}
+
+.tL {
+  text-align: left;
+}
+
+.red {
+  color: #f00;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  transition: 0.2s;
+  text-decoration: underline;
+  word-wrap: break-word;
+}
+a:hover {
+  color: #999;
+  text-decoration: none;
+}
+
+@media (min-width: 751px) {
+  a[href^="tel:"] {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none !important;
+  }
+}
+@media (max-width: 750px) {
+  a[href^="tel:"] {
+    text-decoration: underline !important;
+  }
+}/*# sourceMappingURL=default.css.map */

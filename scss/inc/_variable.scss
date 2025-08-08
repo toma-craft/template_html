@@ -1,0 +1,51 @@
+// color
+$color-text: #000;
+$color-key: #ffec00;
+$color1: #e3007f;
+$color2: #009fe8;
+$color3: #999;
+$color4: #999;
+$color5: #999;
+$color-bg: #f5eeda;
+$color-border: #707070;
+$color-link: #999;
+$color-gray: #999;
+
+// font
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/NotoSansJP-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/NotoSansJP-Medium.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/NotoSansJP-Bold.woff2") format("woff2");
+  font-display: swap;
+}
+$font-default: "Noto Sans JP", "游ゴシック", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", sans-serif;
+$font-en: "Roboto", "Noto Sans JP", "Arial", "游ゴシック", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro";
+$font-default-weight: normal;
+
+// size
+$font-default-size: 16px;
+$font-default-size-tab: 16;
+$font-default-size-sp: 24;
+
+//time(transition...etc)
+$time: 0.2s;
+
+// margin
+$pc-margin: 50px;
+$tab-margin: 3.846vw; //PCベースサイズで50pxを割って、掛ける100
+$sp-margin: 6.667vw; //750px幅で40pxを割って、掛ける100

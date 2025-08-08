@@ -1,0 +1,376 @@
+@charset "utf-8";
+@use "inc/mixin" as *;
+@use "inc/variable" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+embed,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-size: 100%;
+  font-weight: $font-default-weight;
+  border: none;
+  background: transparent;
+  vertical-align: baseline;
+}
+
+html {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+body {
+  font-family: $font-default;
+  font-size: $font-default-size;
+  font-weight: $font-default-weight;
+  font-style: normal;
+  color: $color-text;
+  line-height: $font-line-height;
+  overflow-x: hidden;
+  @include tab {
+    font-size: vw($font-default-size-tab);
+  }
+  @include sp {
+    font-size: vw_sp($font-default-size-sp);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-default;
+  font-size: $font-default-size;
+  font-weight: $font-default-weight;
+  font-style: normal;
+  color: $color-text;
+  line-height: $font-line-height;
+  @include tab {
+    font-size: vw($font-default-size-tab);
+  }
+  @include sp {
+    font-size: vw_sp($font-default-size-sp);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+br {
+  letter-spacing: 0;
+}
+
+pre {
+  font-family: $font-default;
+  line-height: $font-line-height;
+  letter-spacing: 0;
+  white-space: pre;
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: #000;
+  background-color: #000;
+  height: 1px;
+}
+
+//table
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+th,
+td {
+  vertical-align: top;
+}
+
+// list
+ol,
+ul {
+  list-style: none;
+  zoom: normal;
+}
+ol {
+  list-style-type: decimal;
+}
+
+//button
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="email"],
+textarea,
+select {
+  border-width: 1px;
+  border-style: solid;
+  border-color: $color-border;
+  font-size: 93%;
+  color: $color-text;
+  background-color: #fff;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #6ddeff;
+  font-size: 93%;
+  color: $color-text;
+  background-color: #fff;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  padding: 3px 0.7em 1px;
+  margin: 0;
+}
+
+form label,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  font-size: 0.8em;
+  padding: 3px 10px;
+  cursor: hand;
+  cursor: pointer;
+}
+
+input[disabled][readonly] {
+  background-color: #ccc;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+//CSS Tricks
+.hideText {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+//clearfix
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+//iOS input reset
+input[type="text"],
+input[type="submit"],
+input[type="button"],
+input[type="email"],
+input[type="tel"] {
+  font-size: 16px;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input[type="submit"],
+input[type="button"],
+input[type="email"],
+input[type="tel"],
+input[type="button"] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;
+  box-sizing: border-box;
+  &::-webkit-search-decoration {
+    display: none;
+  }
+  &::focus {
+    outline-offset: -2px;
+  }
+}
+input[type="radio"],
+input[type="checkbox"] {
+  border-radius: 0;
+  border: none;
+  box-sizing: border-box;
+  vertical-align: -2px;
+}
+
+//pc none
+.pc {
+  display: inline-block;
+}
+@include sp {
+  .pc {
+    display: none;
+  }
+}
+
+//sp none
+.sp {
+  display: none;
+}
+@include sp {
+  .sp {
+    display: inline-block;
+  }
+}
+
+//align
+.tC {
+  text-align: center;
+}
+.tR {
+  text-align: right;
+}
+.tL {
+  text-align: left;
+}
+
+.red {
+  color: #f00;
+}
+
+//link
+a {
+  color: $color-text;
+  text-decoration: none;
+  transition: $time;
+  text-decoration: underline;
+  word-wrap: break-word;
+  &:hover {
+    color: $color-link;
+    text-decoration: none;
+  }
+}
+
+//tel
+a[href^="tel:"] {
+  @include pc {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none !important;
+  }
+  @include sp {
+    text-decoration: underline !important;
+  }
+}

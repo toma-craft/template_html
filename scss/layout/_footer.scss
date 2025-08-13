@@ -1,5 +1,6 @@
-@use "../inc/mixin" as *;
-@use "../inc/variable" as *;
+@charset "UTF-8";
+@use "sass:math";
+@use "../global" as *;
 
 /********************************************
 * footer

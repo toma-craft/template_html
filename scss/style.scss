@@ -1,8 +1,8 @@
 @charset "UTF-8";
-@use "inc/mixin" as *;
-@use "inc/variable" as *;
-@use "layout/header" as *;
-@use "layout/footer" as *;
+@use "base" as *;
+@use "global" as *;
+@use "layout" as *;
+@use "page" as *;
 
 /********************************************
 /* common
